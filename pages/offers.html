@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grab limited-time travel deals and discounts with Voyara.">
+    <title>Featured Offers | Voyara</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- =====================================================
+                    NAVBAR
+    ===================================================== -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-slate-900">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="../index.html" class="logo">VOYARA</a>
+            <ul class="hidden lg:flex items-center gap-8 text-white font-medium">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="offers.html" class="nav-link active">Offers</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="contact.html"
+                class="hidden lg:block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                Book Now
+            </a>
+            <button id="menu-btn" class="lg:hidden text-white text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg px-6 py-5">
+            <a href="../index.html" class="mobile-link">Home</a>
+            <a href="destinations.html" class="mobile-link">Destinations</a>
+            <a href="packages.html" class="mobile-link">Packages</a>
+            <a href="offers.html" class="mobile-link">Offers</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+
+
+    <!-- =====================================================
+                PAGE HERO
+    ===================================================== -->
+    <section class="page-hero offers-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="relative z-10 text-center text-white px-6">
+            <p class="uppercase tracking-[4px] text-sm font-semibold">Don't Miss Out</p>
+            <h1>Featured Offers</h1>
+            <p>Handpicked deals with real savings — booked in minutes, remembered for years.</p>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                FLASH SALE COUNTDOWN
+    ===================================================== -->
+    <section class="flash-sale">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p class="uppercase tracking-widest font-semibold text-amber-400">Flash Sale Ends In</p>
+            <div id="countdown" class="countdown">
+                <div class="countdown-box"><span id="cd-days">00</span><small>Days</small></div>
+                <div class="countdown-box"><span id="cd-hours">00</span><small>Hours</small></div>
+                <div class="countdown-box"><span id="cd-mins">00</span><small>Mins</small></div>
+                <div class="countdown-box"><span id="cd-secs">00</span><small>Secs</small></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                OFFERS GRID
+    ===================================================== -->
+    <section class="section-padding">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-heading">
+                <p>SAVE MORE</p>
+                <h2>Current Deals</h2>
+                <span>Use the promo code at checkout to unlock your discount.</span>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- OFFER 1 -->
+                <div class="offer-card">
+                    <div class="offer-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80"
+                            alt="Summer Escape">
+                        <span class="discount-badge">25% OFF</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>Summer Escape</h3>
+                        <p>Save on all beach &amp; island destinations booked this month.</p>
+                        <div class="offer-price-row">
+                            <span class="old-price">&#x20B9;76,240</span>
+                            <span class="new-price">&#x20B9;57,156</span>
+                        </div>
+                        <div class="promo-row">
+                            <code class="promo-code" id="promo-1">SUMMER25</code>
+                            <button class="copy-btn" data-target="promo-1"><i class="fa-regular fa-copy"></i>
+                                Copy</button>
+                        </div>
+                        <p class="offer-expiry"><i class="fa-regular fa-clock"></i> Valid till 31 Aug 2026</p>
+                        <a href="contact.html" class="package-button">Grab Deal</a>
+                    </div>
+                </div>
+
+                <!-- OFFER 2 -->
+                <div class="offer-card">
+                    <div class="offer-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=900&q=80"
+                            alt="Honeymoon Special">
+                        <span class="discount-badge">20% OFF</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>Honeymoon Special</h3>
+                        <p>Romantic getaways with complimentary candlelit dinner included.</p>
+                        <div class="offer-price-row">
+                            <span class="old-price">&#x20B9;119,179</span>
+                            <span class="new-price">&#x20B9;95,324</span>
+                        </div>
+                        <div class="promo-row">
+                            <code class="promo-code" id="promo-2">LOVE20</code>
+                            <button class="copy-btn" data-target="promo-2"><i class="fa-regular fa-copy"></i>
+                                Copy</button>
+                        </div>
+                        <p class="offer-expiry"><i class="fa-regular fa-clock"></i> Valid till 15 Sep 2026</p>
+                        <a href="contact.html" class="package-button">Grab Deal</a>
+                    </div>
+                </div>
+
+                <!-- OFFER 3 -->
+                <div class="offer-card">
+                    <div class="offer-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+                            alt="Family Fiesta">
+                        <span class="discount-badge">15% OFF</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>Family Fiesta</h3>
+                        <p>Kids stay &amp; eat free on select family packages this season.</p>
+                        <div class="offer-price-row">
+                            <span class="old-price">&#x20B9;91,698</span>
+                            <span class="new-price">&#x20B9;61,927</span>
+                        </div>
+                        <div class="promo-row">
+                            <code class="promo-code" id="promo-3">FAMILY15</code>
+                            <button class="copy-btn" data-target="promo-3"><i class="fa-regular fa-copy"></i>
+                                Copy</button>
+                        </div>
+                        <p class="offer-expiry"><i class="fa-regular fa-clock"></i> Valid till 10 Sep 2026</p>
+                        <a href="contact.html" class="package-button">Grab Deal</a>
+                    </div>
+                </div>
+
+                <!-- OFFER 4 -->
+                <div class="offer-card">
+                    <div class="offer-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=900&q=80"
+                            alt="Mountain Getaway">
+                        <span class="discount-badge">18% OFF</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>Mountain Getaway</h3>
+                        <p>Alpine retreats with a free scenic rail pass upgrade.</p>
+                        <div class="offer-price-row">
+                            <span class="old-price">&#x20B9;127,767</span>
+                            <span class="new-price">&#x20B9;104,866</span>
+                        </div>
+                        <div class="promo-row">
+                            <code class="promo-code" id="promo-4">ALPINE18</code>
+                            <button class="copy-btn" data-target="promo-4"><i class="fa-regular fa-copy"></i>
+                                Copy</button>
+                        </div>
+                        <p class="offer-expiry"><i class="fa-regular fa-clock"></i> Valid till 20 Sep 2026</p>
+                        <a href="contact.html" class="package-button">Grab Deal</a>
+                    </div>
+                </div>
+
+                <!-- OFFER 5 -->
+                <div class="offer-card">
+                    <div class="offer-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=900&q=80"
+                            alt="City Lights">
+                        <span class="discount-badge">10% OFF</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>City Lights</h3>
+                        <p>Early-bird pricing on all major city break packages.</p>
+                        <div class="offer-price-row">
+                            <span class="old-price">&#x20B9;95,324</span>
+                            <span class="new-price">&#x20B9;85,782</span>
+                        </div>
+                        <div class="promo-row">
+                            <code class="promo-code" id="promo-5">CITY10</code>
+                            <button class="copy-btn" data-target="promo-5"><i class="fa-regular fa-copy"></i>
+                                Copy</button>
+                        </div>
+                        <p class="offer-expiry"><i class="fa-regular fa-clock"></i> Valid till 5 Sep 2026</p>
+                        <a href="contact.html" class="package-button">Grab Deal</a>
+                    </div>
+                </div>
+
+                <!-- OFFER 6 -->
+                <div class="offer-card">
+                    <div class="offer-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80"
+                            alt="Island Hopper">
+                        <span class="discount-badge">22% OFF</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>Island Hopper</h3>
+                        <p>Multi-island itineraries with free airport lounge access.</p>
+                        <div class="offer-price-row">
+                            <span class="old-price">&#x20B9;83,492</span>
+                            <span class="new-price">&#x20B9;66,698</span>
+                        </div>
+                        <div class="promo-row">
+                            <code class="promo-code" id="promo-6">ISLAND22</code>
+                            <button class="copy-btn" data-target="promo-6"><i class="fa-regular fa-copy"></i>
+                                Copy</button>
+                        </div>
+                        <p class="offer-expiry"><i class="fa-regular fa-clock"></i> Valid till 12 Sep 2026</p>
+                        <a href="contact.html" class="package-button">Grab Deal</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                    CTA
+    ===================================================== -->
+    <section class="cta-section">
+        <div class="max-w-4xl mx-auto text-center text-white px-6">
+            <h2>Deals This Good Don't Last</h2>
+            <p>Lock in your discount before the offer expires.</p>
+            <a href="contact.html" class="cta-button">Claim Your Offer</a>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                    FOOTER
+    ===================================================== -->
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <h2>VOYARA</h2>
+                    <p>Explore beyond boundaries and create unforgettable memories with us.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <a href="../index.html">Home</a>
+                    <a href="destinations.html">Destinations</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="offers.html">Offers</a>
+                </div>
+                <div>
+                    <h3>Popular Places</h3>
+                    <a href="destinations.html">Paris</a>
+                    <a href="destinations.html">Bali</a>
+                    <a href="destinations.html">Dubai</a>
+                    <a href="destinations.html">Tokyo</a>
+                </div>
+                <div>
+                    <h3>Contact Us</h3>
+                    <p><i class="fa-solid fa-envelope"></i> hello@voyara.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fa-solid fa-location-dot"></i> New Delhi, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Voyara. All Rights Reserved.</div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

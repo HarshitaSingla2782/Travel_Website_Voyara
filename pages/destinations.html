@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore amazing destinations around the world with Voyara.">
+    <title>Destinations | Voyara</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- =====================================================
+                    NAVBAR
+    ===================================================== -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-slate-900">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- LOGO -->
+            <a href="../index.html" class="logo">VOYARA</a>
+
+
+            <!-- DESKTOP MENU -->
+            <ul class="hidden lg:flex items-center gap-8 text-white font-medium">
+                <li>
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li>
+                    <a href="destinations.html" class="nav-link active">Destinations</a>
+                </li>
+                <li>
+                    <a href="packages.html" class="nav-link">Packages</a>
+                </li>
+                <li>
+                    <a href="offers.html" class="nav-link">Offers</a>
+                </li>
+                <li>
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <!-- EXPLORE BUTTON -->
+            <a href="packages.html"
+                class="hidden lg:block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                View Packages
+            </a>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button id="menu-btn" class="lg:hidden text-white text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg px-6 py-5">
+            <a href="../index.html" class="mobile-link">Home</a>
+            <a href="destinations.html" class="mobile-link">Destinations</a>
+            <a href="packages.html" class="mobile-link">Packages</a>
+            <a href="offers.html" class="mobile-link">Offers</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+
+
+    <!-- =====================================================
+                PAGE HERO
+    =================================================== -->
+    <section class="page-hero destinations-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="relative z-10 text-center text-white px-6">
+            <p class="uppercase tracking-[4px] text-sm font-semibold">Explore The World</p>
+            <h1>Discover Amazing Destinations</h1>
+            <p>
+                From tropical beaches to historic cities, ind your next unforgettable adventure.
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                DESTINATION SEARCH
+    ===================================================== -->
+    <section class="destination-search">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="destination-search-box">
+                <div>
+                    <label>Search Destination</label>
+                    <div class="search-input-wrapper">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="destination-search" placeholder="Search Paris, Bali, Dubai...">
+                    </div>
+                </div>
+                <div>
+                    <label>Region</label>
+                    <select id="region-filter">
+                        <option value="all">All Regions</option>
+                        <option value="europe">Europe</option>
+                        <option value="asia">Asia</option>
+                        <option value="middle-east">Middle East</option>
+                        <option value="america">America</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                DESTINATIONS
+    ===================================================== -->
+    <section class="section-padding">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-heading">
+                <p>FIND YOUR ESCAPE</p>
+                <h2>Explore Destinations</h2>
+                <span>Choose a destination and start planning your next adventure.</span>
+            </div>
+
+            <div id="destination-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- =================================================
+                            PARIS
+                ================================================== -->
+                <article class="destination-card destination-item" data-region="europe" data-name="paris france">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80"
+                            alt="Paris France">
+                        <div class="destination-name">
+                            <h3>Paris</h3>
+                            <p>France</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>Paris, France</h3>
+                            <p>⭐ 4.9 • Europe</p>
+                        </div>
+                        <strong>&#x20B9;57,156</strong>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="packages.html" class="package-button">Explore Paris</a>
+                    </div>
+                </article>
+
+
+                <!-- =================================================
+                            BALI
+                ================================================== -->
+                <article class="destination-card destination-item" data-region="asia" data-name="bali indonesia">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80"
+                            alt="Bali Indonesia">
+                        <div class="destination-name">
+                            <h3>Bali</h3>
+                            <p>Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>Bali, Indonesia</h3>
+                            <p>⭐ 4.8 • Asia</p>
+                        </div>
+                        <strong>&#x20B9;66,698</strong>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="packages.html" class="package-button">Explore Bali</a>
+                    </div>
+                </article>
+
+
+                <!-- =================================================
+                            DUBAI
+                ================================================== -->
+                <article class="destination-card destination-item" data-region="middle-east" data-name="dubai uae">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+                            alt="Dubai UAE">
+                        <div class="destination-name">
+                            <h3>Dubai</h3>
+                            <p>UAE</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>Dubai, UAE</h3>
+                            <p>⭐ 4.9 • Middle East</p>
+                        </div>
+                        <strong>&#x20B9;61,927</strong>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="packages.html" class="package-button">Explore Dubai</a>
+                    </div>
+                </article>
+
+
+                <!-- =================================================
+                            TOKYO
+                ================================================== -->
+                <article class="destination-card destination-item" data-region="asia" data-name="tokyo japan">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=80"
+                            alt="Tokyo Japan">
+                        <div class="destination-name">
+                            <h3>Tokyo</h3>
+                            <p>Japan</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>Tokyo, Japan</h3>
+                            <p>⭐ 4.8 • Asia</p>
+                        </div>
+                        <strong>&#x20B9;85,782</strong>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="packages.html" class="package-button">Explore Tokyo</a>
+                    </div>
+                </article>
+
+
+                <!-- =================================================
+                            ROME
+                ================================================== -->
+                <article class="destination-card destination-item" data-region="europe" data-name="rome italy">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=900&q=80"
+                            alt="Rome Italy">
+                        <div class="destination-name">
+                            <h3>Rome</h3>
+                            <p>Italy</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>Rome, Italy</h3>
+                            <p>⭐ 4.7 • Europe</p>
+                        </div>
+                        <strong>&#x20B9;52,385</strong>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="packages.html" class="package-button">Explore Rome</a>
+                    </div>
+                </article>
+
+
+                <!-- =================================================
+                            SWITZERLAND
+                ================================================== -->
+                <article class="destination-card destination-item" data-region="europe" data-name="switzerland">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=900&q=80"
+                            alt="Switzerland">
+                        <div class="destination-name">
+                            <h3>Switzerland</h3>
+                            <p>Europe</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>Switzerland</h3>
+                            <p>⭐ 4.9 • Europe</p>
+                        </div>
+                        <strong>&#x20B9;104,866</strong>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="packages.html" class="package-button">Explore Switzerland</a>
+                    </div>
+                </article>
+
+
+                <!-- =================================================
+                            NEW YORK
+                ================================================== -->
+                <article class="destination-card destination-item" data-region="america" data-name="new york usa">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=900&q=80"
+                            alt="New York">
+                        <div class="destination-name">
+                            <h3>New York</h3>
+                            <p>USA</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>New York, USA</h3>
+                            <p>⭐ 4.8 • America</p>
+                        </div>
+                        <strong>&#x20B9;76,240</strong>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="packages.html" class="package-button">Explore New York</a>
+                    </div>
+                </article>
+
+
+                <!-- =================================================
+                            SANTORINI
+                ================================================== -->
+                <article class="destination-card destination-item" data-region="europe" data-name="santorini greece">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=900&q=80"
+                            alt="Santorini Greece">
+                        <div class="destination-name">
+                            <h3>Santorini</h3>
+                            <p>Greece</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>Santorini, Greece</h3>
+                            <p>⭐ 4.9 • Europe</p>
+                        </div>
+                        <strong>&#x20B9;95,324</strong>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="packages.html" class="package-button">Explore Santorini</a>
+                    </div>
+                </article>
+
+
+                <!-- =================================================
+                            CAPE TOWN
+                ================================================== -->
+                <article class="destination-card destination-item" data-region="america"
+                    data-name="cape town south africa">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=900&q=80"
+                            alt="Cape Town">
+                        <div class="destination-name">
+                            <h3>Cape Town</h3>
+                            <p>South Africa</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>Cape Town</h3>
+                            <p>⭐ 4.8 • Adventure</p>
+                        </div>
+                        <strong>&#x20B9;71,469</strong>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="packages.html" class="package-button">Explore Cape Town</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- NO RESULTS -->
+            <p id="no-results" class="hidden text-center text-gray-500 mt-10 text-lg">
+                No destinations found. Try another search.
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                    CTA
+    ===================================================== -->
+    <section class="cta-section">
+        <div class="max-w-4xl mx-auto text-center text-white px-6">
+            <h2>Found Your Dream Destination?</h2>
+            <p>Let us help you turn your travel dreams into reality.</p>
+            <a href="contact.html" class="cta-button">Plan My Trip</a>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                    FOOTER
+    ===================================================== -->
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- BRAND -->
+                <div>
+                    <h2>VOYARA</h2>
+                    <p>
+                        Explore beyond boundaries and create unforgettable memories with us.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div>
+                    <h3>Quick Links</h3>
+                    <a href="../index.html">Home</a>
+                    <a href="destinations.html">Destinations</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="offers.html">Offers</a>
+                </div>
+
+                <!-- DESTINATIONS -->
+                <div>
+                    <h3>Popular Places</h3>
+                    <a href="destinations.html">Paris</a>
+                    <a href="destinations.html">Bali</a>
+                    <a href="destinations.html">Dubai</a>
+                    <a href="destinations.html">Tokyo</a>
+                </div>
+
+                <!-- CONTACT -->
+                <div>
+                    <h3>Contact Us</h3>
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        hello@voyara.com
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +91 98765 43210
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        New Delhi, India
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Voyara. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

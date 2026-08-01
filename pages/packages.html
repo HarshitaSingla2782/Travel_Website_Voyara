@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse handpicked travel packages with Voyara — flights, stays and experiences bundled together.">
+    <title>Travel Packages | Voyara</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-slate-900">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="../index.html" class="logo">VOYARA</a>
+            <ul class="hidden lg:flex items-center gap-8 text-white font-medium">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="packages.html" class="nav-link active">Packages</a></li>
+                <li><a href="offers.html" class="nav-link">Offers</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="contact.html"
+                class="hidden lg:block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-semibold transition">Book
+                Now</a>
+            <button id="menu-btn" class="lg:hidden text-white text-2xl"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg px-6 py-5">
+            <a href="../index.html" class="mobile-link">Home</a>
+            <a href="destinations.html" class="mobile-link">Destinations</a>
+            <a href="packages.html" class="mobile-link">Packages</a>
+            <a href="offers.html" class="mobile-link">Offers</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <section class="page-hero packages-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="relative z-10 text-center text-white px-6">
+            <p class="uppercase tracking-[4px] text-sm font-semibold">Curated For You</p>
+            <h1>Travel Packages</h1>
+            <p>All-inclusive packages bundling flights, stays and experiences — planned so you don't have to.</p>
+        </div>
+    </section>
+
+    <section class="package-filter-wrapper">
+        <div class="max-w-7xl mx-auto px-6">
+            <div id="package-filter" class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All Packages</button>
+                <button class="filter-tab" data-filter="honeymoon">Honeymoon</button>
+                <button class="filter-tab" data-filter="family">Family</button>
+                <button class="filter-tab" data-filter="adventure">Adventure</button>
+                <button class="filter-tab" data-filter="luxury">Luxury</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding pt-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div id="package-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="package-card package-item" data-category="honeymoon">
+                    <div class="package-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80"
+                            alt="Paris Romantic Getaway">
+                        <span class="package-badge">Honeymoon</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>Paris Romantic Getaway</h3>
+                        <p>5 Days / 4 Nights • Flights + Hotel + Breakfast</p>
+                        <div class="package-price">&#x20B9;57,156 <span>/ person</span></div>
+                        <div class="package-actions">
+                            <button class="details-btn" data-title="Paris Romantic Getaway"
+                                data-image="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80"
+                                data-duration="5 Days / 4 Nights" data-price="&#x20B9;57,156" data-rating="4.9"
+                                data-desc="A dreamy escape through the City of Light — candlelit dinners, the Seine at sunset and iconic landmarks at every turn."
+                                data-itinerary="Day 1: Arrival &amp; Eiffel Tower evening tour|Day 2: Louvre Museum &amp; Seine river cruise|Day 3: Montmartre &amp; Sacré-Cœur|Day 4: Versailles day trip|Day 5: Leisure &amp; departure"
+                                data-includes="Return flights|4-night stay in a boutique hotel|Daily breakfast|Airport transfers|Seine river cruise ticket"
+                                data-excludes="Travel insurance|Lunch &amp; dinner (unless noted)|Personal expenses">
+                                View Details
+                            </button>
+                            <a href="contact.html" class="package-button">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card package-item" data-category="family adventure">
+                    <div class="package-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+                            alt="Dubai Family Adventure">
+                        <span class="package-badge">Family</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>Dubai Family Adventure</h3>
+                        <p>5 Days / 4 Nights • Flights + Hotel + Tours</p>
+                        <div class="package-price">&#x20B9;61,927 <span>/ person</span></div>
+                        <div class="package-actions">
+                            <button class="details-btn" data-title="Dubai Family Adventure"
+                                data-image="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+                                data-duration="5 Days / 4 Nights" data-price="&#x20B9;61,927" data-rating="4.8"
+                                data-desc="Desert safaris, sky-high views and theme parks — a package built for families who want it all."
+                                data-itinerary="Day 1: Arrival &amp; Burj Khalifa visit|Day 2: Desert safari &amp; BBQ dinner|Day 3: Theme park day|Day 4: Dubai Marina cruise|Day 5: Shopping &amp; departure"
+                                data-includes="Return flights|4-night 4-star hotel stay|Daily breakfast|Desert safari with dinner|Theme park tickets"
+                                data-excludes="Travel insurance|Optional excursions|Visa fees">
+                                View Details
+                            </button>
+                            <a href="contact.html" class="package-button">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card package-item" data-category="adventure">
+                    <div class="package-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80"
+                            alt="Bali Island Adventure">
+                        <span class="package-badge">Adventure</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>Bali Island Adventure</h3>
+                        <p>6 Days / 5 Nights • Flights + Villa + Activities</p>
+                        <div class="package-price">&#x20B9;66,698 <span>/ person</span></div>
+                        <div class="package-actions">
+                            <button class="details-btn" data-title="Bali Island Adventure"
+                                data-image="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80"
+                                data-duration="6 Days / 5 Nights" data-price="&#x20B9;66,698" data-rating="4.8"
+                                data-desc="Rice terraces, waterfalls and surf breaks — an active island escape through Bali's most scenic corners."
+                                data-itinerary="Day 1: Arrival &amp; Ubud village walk|Day 2: Tegallalang rice terraces &amp; waterfalls|Day 3: Surf lesson at Canggu|Day 4: Mount Batur sunrise trek|Day 5: Uluwatu Temple &amp; beach clubs|Day 6: Leisure &amp; departure"
+                                data-includes="Return flights|5-night private villa stay|Daily breakfast|Guided waterfall &amp; trekking tours|Surf lesson"
+                                data-excludes="Travel insurance|Lunch &amp; dinner|Spa treatments">
+                                View Details
+                            </button>
+                            <a href="contact.html" class="package-button">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card package-item" data-category="luxury honeymoon">
+                    <div class="package-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=900&q=80"
+                            alt="Santorini Luxury Escape">
+                        <span class="package-badge">Luxury</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>Santorini Luxury Escape</h3>
+                        <p>5 Days / 4 Nights • Flights + Suite + Cruise</p>
+                        <div class="package-price">&#x20B9;95,324 <span>/ person</span></div>
+                        <div class="package-actions">
+                            <button class="details-btn" data-title="Santorini Luxury Escape"
+                                data-image="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=900&q=80"
+                                data-duration="5 Days / 4 Nights" data-price="&#x20B9;95,324" data-rating="4.9"
+                                data-desc="Caldera-view suites, private sunset cruises and whitewashed villages — Santorini at its most indulgent."
+                                data-itinerary="Day 1: Arrival &amp; caldera-view check-in|Day 2: Oia village &amp; sunset viewing|Day 3: Private catamaran cruise|Day 4: Wine tasting tour|Day 5: Leisure &amp; departure"
+                                data-includes="Return flights|4-night caldera-view suite|Daily breakfast|Private sunset catamaran cruise|Wine tasting tour"
+                                data-excludes="Travel insurance|Lunch &amp; dinner|Spa &amp; extra excursions">
+                                View Details
+                            </button>
+                            <a href="contact.html" class="package-button">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card package-item" data-category="family">
+                    <div class="package-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=900&q=80"
+                            alt="Tokyo Family Explorer">
+                        <span class="package-badge">Family</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>Tokyo Family Explorer</h3>
+                        <p>6 Days / 5 Nights • Flights + Hotel + Pass</p>
+                        <div class="package-price">&#x20B9;85,782 <span>/ person</span></div>
+                        <div class="package-actions">
+                            <button class="details-btn" data-title="Tokyo Family Explorer"
+                                data-image="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=900&q=80"
+                                data-duration="6 Days / 5 Nights" data-price="&#x20B9;85,782" data-rating="4.7"
+                                data-desc="Neon streets, anime culture and bullet trains — a family-friendly dive into modern and traditional Japan."
+                                data-itinerary="Day 1: Arrival &amp; Shinjuku exploration|Day 2: Tokyo Disneyland|Day 3: Asakusa &amp; Senso-ji Temple|Day 4: Day trip to Mt. Fuji|Day 5: Akihabara &amp; Shibuya Crossing|Day 6: Leisure &amp; departure"
+                                data-includes="Return flights|5-night hotel stay|Daily breakfast|7-day Tokyo transit pass|Theme park day ticket"
+                                data-excludes="Travel insurance|Lunch &amp; dinner|Personal expenses">
+                                View Details
+                            </button>
+                            <a href="contact.html" class="package-button">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card package-item" data-category="adventure luxury">
+                    <div class="package-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=900&q=80"
+                            alt="Swiss Alps Retreat">
+                        <span class="package-badge">Adventure</span>
+                    </div>
+                    <div class="p-6">
+                        <h3>Swiss Alps Retreat</h3>
+                        <p>6 Days / 5 Nights • Flights + Chalet + Rail Pass</p>
+                        <div class="package-price">&#x20B9;104,866 <span>/ person</span></div>
+                        <div class="package-actions">
+                            <button class="details-btn" data-title="Swiss Alps Retreat"
+                                data-image="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=900&q=80"
+                                data-duration="6 Days / 5 Nights" data-price="&#x20B9;104,866" data-rating="4.9"
+                                data-desc="Snow-capped peaks, scenic rail journeys and alpine villages — an unforgettable mountain retreat."
+                                data-itinerary="Day 1: Arrival in Zurich &amp; transfer to chalet|Day 2: Jungfraujoch 'Top of Europe' excursion|Day 3: Lake Lucerne &amp; cable car|Day 4: Scenic rail journey to Interlaken|Day 5: Alpine hiking &amp; leisure|Day 6: Departure"
+                                data-includes="Return flights|5-night alpine chalet stay|Daily breakfast|Swiss rail pass|Jungfraujoch excursion"
+                                data-excludes="Travel insurance|Lunch &amp; dinner|Ski equipment rental">
+                                View Details
+                            </button>
+                            <a href="contact.html" class="package-button">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="package-modal" class="package-modal hidden">
+        <div class="package-modal-backdrop"></div>
+        <div class="package-modal-content">
+            <button id="modal-close" class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <img id="modal-image" src="" alt="">
+            <div class="package-modal-body">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                    <h3 id="modal-title"></h3>
+                    <span id="modal-rating" class="modal-rating"></span>
+                </div>
+                <p id="modal-duration" class="modal-duration"></p>
+                <p id="modal-desc" class="modal-desc"></p>
+                <div class="modal-grid">
+                    <div>
+                        <h4>Itinerary</h4>
+                        <ul id="modal-itinerary" class="modal-list"></ul>
+                    </div>
+                    <div>
+                        <h4>Inclusions</h4>
+                        <ul id="modal-includes" class="modal-list check-list"></ul>
+                        <h4 class="mt-5">Exclusions</h4>
+                        <ul id="modal-excludes" class="modal-list cross-list"></ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="package-price" id="modal-price"></div>
+                    <a href="contact.html" class="package-button">Book This Package</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <div class="max-w-4xl mx-auto text-center text-white px-6">
+            <h2>Can't Decide Which Package?</h2>
+            <p>Tell us what you're dreaming of and we'll tailor the perfect trip for you.</p>
+            <a href="contact.html" class="cta-button">Talk To An Expert</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <h2>VOYARA</h2>
+                    <p>Explore beyond boundaries and create unforgettable memories with us.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <a href="../index.html">Home</a>
+                    <a href="destinations.html">Destinations</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="offers.html">Offers</a>
+                </div>
+                <div>
+                    <h3>Popular Places</h3>
+                    <a href="destinations.html">Paris</a>
+                    <a href="destinations.html">Bali</a>
+                    <a href="destinations.html">Dubai</a>
+                    <a href="destinations.html">Tokyo</a>
+                </div>
+                <div>
+                    <h3>Contact Us</h3>
+                    <p><i class="fa-solid fa-envelope"></i> hello@voyara.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fa-solid fa-location-dot"></i> New Delhi, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Voyara. All Rights Reserved.</div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
