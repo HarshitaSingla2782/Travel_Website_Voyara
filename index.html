@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Voyara - Explore beautiful destinations and unforgettable travel experiences.">
+    <title>Voyara | Explore Beyond Boundaries</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- =====================================================
+                    NAVBAR
+    ===================================================== -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- LOGO -->
+            <a href="index.html" class="logo">VOYARA</a>
+
+
+            <!-- DESKTOP NAVIGATION -->
+            <ul class="hidden lg:flex items-center gap-8 text-white font-medium">
+                <li>
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li>
+                    <a href="pages/destinations.html" class="nav-link">Destinations</a>
+                </li>
+                <li>
+                    <a href="pages/packages.html" class="nav-link">Packages</a>
+                </li>
+                <li>
+                    <a href="pages/offers.html" class="nav-link">Offers</a>
+                </li>
+                <li>
+                    <a href="pages/about.html" class="nav-link">About</a>
+                </li>
+                <li>
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <!-- DESKTOP BUTTON -->
+            <a href="pages/destinations.html"
+                class="hidden lg:block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                Explore Now
+            </a>
+
+            <!-- MOBILE BUTTON -->
+            <button id="menu-btn" class="lg:hidden text-white text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg px-6 py-5">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="pages/destinations.html" class="mobile-link">Destinations</a>
+            <a href="pages/packages.html" class="mobile-link">Packages</a>
+            <a href="pages/offers.html" class="mobile-link">Offers</a>
+            <a href="pages/about.html" class="mobile-link">About</a>
+            <a href="pages/contact.html" class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+
+
+    <!-- =====================================================
+                    HERO SECTION
+    ===================================================== -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 text-center text-white px-6">
+            <p class="uppercase tracking-[5px] font-semibold text-sm md:text-base">
+                Explore • Experience • Remember
+            </p>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mt-5 leading-tight">
+                Discover the World.
+                <span class="text-amber-400">Create Memories.</span>
+            </h1>
+            <p class="max-w-2xl mx-auto mt-6 text-gray-200 text-base md:text-xl">
+                Discover breathtaking destinations, unforgettable experiences
+                and exciting adventures with Voyara.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="pages/destinations.html"
+                    class="bg-amber-500 hover:bg-amber-600 px-7 py-3 rounded-full font-semibold transition">
+                    Explore Destinations
+                </a>
+                <a href="pages/packages.html"
+                    class="border-2 border-white hover:bg-white hover:text-slate-900 px-7 py-3 rounded-full font-semibold transition">
+                    View Packages
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                    SEARCH SECTION
+    ===================================================== -->
+    <section class="search-wrapper">
+        <div class="search-box">
+            <div class="search-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <label>Destination</label>
+                    <input id="destination" type="text" placeholder="Where do you want to go?">
+                </div>
+            </div>
+            <div class="search-item">
+                <i class="fa-regular fa-calendar"></i>
+                <div>
+                    <label>Check In</label>
+                    <input type="date">
+                </div>
+            </div>
+            <div class="search-item">
+                <i class="fa-regular fa-calendar"></i>
+                <div>
+                    <label>Check Out</label>
+                    <input type="date">
+                </div>
+            </div>
+            <button id="search-btn" class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </button>
+        </div>
+        <p id="search-message" class="text-center mt-3 hidden"></p>
+    </section>
+
+
+
+    <!-- =====================================================
+                POPULAR DESTINATIONS
+    ===================================================== -->
+    <section class="section-padding">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-heading">
+                <p>EXPLORE THE WORLD</p>
+                <h2>Popular Destinations</h2>
+                <span>
+                    Discover some of the world's most beautiful destinations.
+                </span>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+                <!-- DESTINATION 1 -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80"
+                            alt="Paris">
+                        <div class="destination-name">
+                            <h3>Paris</h3>
+                            <p>France</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>Paris, France</h3>
+                            <p>⭐ 4.9 • Romantic Escape
+                            </p>
+                        </div>
+                        <strong>&#x20B9;57,156</strong>
+                    </div>
+                </div>
+
+                <!-- DESTINATION 2 -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80"
+                            alt="Bali">
+                        <div class="destination-name">
+                            <h3>Bali</h3>
+                            <p>Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>Bali, Indonesia</h3>
+                            <p>⭐ 4.8 • Tropical Paradise</p>
+                        </div>
+                        <strong>&#x20B9;66,698</strong>
+                    </div>
+                </div>
+
+                <!-- DESTINATION 3 -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+                            alt="Dubai">
+                        <div class="destination-name">
+                            <h3>Dubai</h3>
+                            <p>UAE</p>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <div>
+                            <h3>Dubai, UAE</h3>
+                            <p>⭐ 4.9 • Luxury Escape</p>
+                        </div>
+                        <strong>&#x20B9;61,927</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="pages/destinations.html" class="primary-button">
+                    View All Destinations
+                    <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+            FEATURED PACKAGE
+    ===================================================== -->
+    <section class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-heading">
+                <p>TRAVEL YOUR WAY</p>
+                <h2>Featured Travel Packages</h2>
+                <span>
+                    Carefully designed journeys for unforgettable experiences.
+                </span>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="package-card">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80"
+                        alt="Bali">
+                    <div class="p-6">
+                        <h3>Bali Adventure</h3>
+                        <p>7 Days / 6 Nights</p>
+                        <div class="package-price">&#x20B9;66,698</div>
+                        <a href="pages/packages.html" class="package-button">
+                            View Package
+                        </a>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+                        alt="Dubai">
+                    <div class="p-6">
+                        <h3>Dubai Experience</h3>
+                        <p>5 Days / 4 Nights</p>
+                        <div class="package-price">&#x20B9;61,927</div>
+                        <a href="pages/packages.html" class="package-button">
+                            View Package
+                        </a>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80"
+                        alt="Paris">
+                    <div class="p-6">
+                        <h3>Paris Escape</h3>
+                        <p>5 Days / 4 Nights</p>
+                        <div class="package-price">&#x20B9;57,156</div>
+                        <a href="pages/packages.html" class="package-button">
+                            View Package
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                    FEATURED OFFER
+    ===================================================== -->
+    <section class="offer-section">
+        <div class="offer-overlay"></div>
+        <div class="relative z-10 text-center text-white px-6">
+            <p class="uppercase tracking-widest font-semibold">LIMITED TIME OFFER</p>
+            <h2>Summer Escape</h2>
+            <p>Save up to 25% on selected destinations.</p>
+            <a href="pages/offers.html" class="primary-button offer-button">
+                Explore Offers
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                    CUSTOMER REVIEWS
+    ===================================================== -->
+    <section class="section-padding">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-heading">
+                <p>HAPPY TRAVELLERS</p>
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        "Voyara made planning our Bali trip incredibly easy.
+                        Everything was organised perfectly."
+                    </p>
+                    <div class="review-user">
+                        <div class="avatar">PS</div>
+                        <div>
+                            <strong>Priya Sharma</strong>
+                            <span>Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        "Beautiful destinations, great packages and excellent
+                        service. I'll definitely travel with Voyara again."
+                    </p>
+                    <div class="review-user">
+                        <div class="avatar">RM</div>
+                        <div>
+                            <strong>Rahul Mehta</strong>
+                            <span>Mumbai, India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        "Our Paris vacation was unforgettable.
+                        The itinerary was perfectly planned."
+                    </p>
+                    <div class="review-user">
+                        <div class="avatar">AK</div>
+                        <div>
+                            <strong>Ananya Kapoor</strong>
+                            <span>Chandigarh, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                    CALL TO ACTION
+    ===================================================== -->
+    <section class="cta-section">
+        <div class="max-w-4xl mx-auto text-center text-white px-6">
+            <h2>Your Next Adventure Starts Here</h2>
+            <p>
+                Pack your bags and let Voyara take you somewhere unforgettable.
+            </p>
+            <a href="pages/contact.html" class="cta-button">Plan My Trip</a>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+                    FOOTER
+    ===================================================== -->
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- BRAND -->
+                <div>
+                    <h2>VOYARA</h2>
+                    <p>
+                        Explore beyond boundaries and create unforgettable memories with us.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div>
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="pages/destinations.html">Destinations</a>
+                    <a href="pages/packages.html">Packages</a>
+                    <a href="pages/offers.html">Offers</a>
+                </div>
+
+                <!-- DESTINATIONS -->
+                <div>
+                    <h3>Top Destinations</h3>
+                    <a href="pages/destinations.html">Paris</a>
+                    <a href="pages/destinations.html">Bali</a>
+                    <a href="pages/destinations.html">Dubai</a>
+                    <a href="pages/destinations.html">Tokyo</a>
+                </div>
+
+                <!-- CONTACT -->
+                <div>
+                    <h3>Contact Us</h3>
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        hello@voyara.com
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +91 98765 43210
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        New Delhi, India
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Voyara. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
